@@ -1,3 +1,13 @@
+C:\Users\HP-ProBook\Desktop\tmp\DentalNation\bin\Debug\DentalNation.exe.config
+C:\Users\HP-ProBook\Desktop\tmp\DentalNation\bin\Debug\DentalNation.exe
+C:\Users\HP-ProBook\Desktop\tmp\DentalNation\bin\Debug\DentalNation.pdb
+C:\Users\HP-ProBook\Desktop\tmp\DentalNation\obj\Debug\DentalNation.csproj.AssemblyReference.cache
+C:\Users\HP-ProBook\Desktop\tmp\DentalNation\obj\Debug\DentalNation.csproj.SuggestedBindingRedirects.cache
+C:\Users\HP-ProBook\Desktop\tmp\DentalNation\obj\Debug\DentalNation.Properties.Resources.resources
+C:\Users\HP-ProBook\Desktop\tmp\DentalNation\obj\Debug\DentalNation.csproj.GenerateResource.cache
+C:\Users\HP-ProBook\Desktop\tmp\DentalNation\obj\Debug\DentalNation.csproj.CoreCompileInputs.cache
+C:\Users\HP-ProBook\Desktop\tmp\DentalNation\obj\Debug\DentalNation.exe
+C:\Users\HP-ProBook\Desktop\tmp\DentalNation\obj\Debug\DentalNation.pdb
 C:\Users\HP-ProBook\Desktop\DentalNation\DentalNation\bin\Debug\DentalNation.exe.config
 C:\Users\HP-ProBook\Desktop\DentalNation\DentalNation\bin\Debug\DentalNation.exe
 C:\Users\HP-ProBook\Desktop\DentalNation\DentalNation\bin\Debug\DentalNation.pdb
