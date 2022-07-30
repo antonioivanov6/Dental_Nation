@@ -8,23 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace DentalNation
+namespace DentalNation.forms
 {
-    public partial class Form1 : Form
+    public partial class form_dashboard : UserControl
     {
-        public Form1()
+        public form_dashboard()
         {
             InitializeComponent();
-        }
-
-        private void bunifuButton1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void bunifuButton2_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
