@@ -13,31 +13,39 @@ namespace DentalNation
 
             Logger.Init("DentalNation.log");
 
-            String dbConf = "SERVER=localhost;DATABASE=test_db;UID=root;PASSWORD=;";
+            String dbConf = "SERVER=localhost;UID=admin;PASSWORD=4444;";
             Database.Init(dbConf);
-
-            Logger.Write(Level.DEBUG, "try!");
         }
 
-        
+
         private void button_dashboard_Click(object sender, EventArgs e)
         {
             Logger.Write(Level.DEBUG, "Clicked on dashboard");
 
-            form_search.Hide();
-            
-            form_dashboard.Show();
-            form_dashboard.BringToFront();
+            form_search_main.Hide();
+
+            form_dashboard_main.Show();
+            form_dashboard_main.BringToFront();
         }
 
         private void button_search_Click(object sender, EventArgs e)
         {
             Logger.Write(Level.DEBUG, "Clicked on search");
 
-            form_dashboard.Hide();
+            form_dashboard_main.Hide();
 
-            form_search.Show();
-            form_search.BringToFront();
+            form_search_main.Show();
+            form_search_main.BringToFront();
+        }
+
+        private void form_search_main_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void form_dashboard_main_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -23,8 +23,7 @@ namespace DentalNation.source.libs
 
             writer.WriteLine("[" 
                 + now.ToShortDateString() + " "
-                + now.ToLongTimeString() + ":" 
-                + now.Millisecond + "][" 
+                + now.ToLongTimeString() + "][" 
                 + lvl.ToString() + "] " 
                 + message);
         }

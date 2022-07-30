@@ -1,18 +1,21 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
 using MySql.Data.MySqlClient;
 
 namespace DentalNation.source.libs
 {
     internal class Database
     {
+        static private MySqlConnection conn;
+
         static public void Init(String connectionStr)
         {
-            MySqlConnection Conn = new MySqlConnection(connectionStr);
+            conn = new MySqlConnection(connectionStr);
+            MySqlCommand cmd = conn.CreateCommand();
+            
+            conn.Open();
+            cmd.CommandText = "CREATE DATABASE IF NOT EXISTS `dental`;";
+            cmd.ExecuteNonQuery();
+            conn.Close();
         }
     }
 }
