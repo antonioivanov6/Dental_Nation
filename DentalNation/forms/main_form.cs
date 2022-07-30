@@ -18,6 +18,7 @@ namespace DentalNation
             Database.Init(dbConf);
 
             UIController.Init(form_dashboard, form_search, form_patient_preview);
+            UIController.ShowDashboard();
         }
 
 

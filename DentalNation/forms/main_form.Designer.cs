@@ -102,9 +102,9 @@
             // form_patient_preview1
             // 
             this.form_patient_preview.BackColor = System.Drawing.Color.LemonChiffon;
-            this.form_patient_preview.Location = new System.Drawing.Point(297, 275);
+            this.form_patient_preview.Location = new System.Drawing.Point(274, 12);
             this.form_patient_preview.Name = "form_patient_preview1";
-            this.form_patient_preview.Size = new System.Drawing.Size(849, 526);
+            this.form_patient_preview.Size = new System.Drawing.Size(800, 671);
             this.form_patient_preview.TabIndex = 2;
             // 
             // form_main
@@ -127,15 +127,17 @@
 
         #endregion
 
+        //Panels
+        public System.Windows.Forms.Panel leftPanel;
+
         //Buttons
-        private System.Windows.Forms.Button button_search;
         private System.Windows.Forms.Button button_dashboard;
+        private System.Windows.Forms.Button button_search;
         private System.Windows.Forms.Button button_patient_preview;
 
         //Forms
-        public System.Windows.Forms.Panel leftPanel;
-        public forms.form_dashboard form_dashboard;
-        public forms.form_search form_search;
+        public forms.form_dashboard       form_dashboard;
+        public forms.form_search          form_search;
         public forms.form_patient_preview form_patient_preview;
     }
 }
