@@ -38,14 +38,13 @@ namespace DentalNation
             form_search.BringToFront();
         }
 
-        private void form_search_main_Load(object sender, EventArgs e)
+        private void button_patient_preview_Click(object sender, EventArgs e)
         {
+            Logger.Write(Level.DEBUG, "Clicked on patien preview");
 
-        }
+            form_search.Hide();
 
-        private void form_dashboard_main_Load(object sender, EventArgs e)
-        {
-
+            form_patient_preview.Show();
         }
     }
 }

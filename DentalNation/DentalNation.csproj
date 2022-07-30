@@ -108,6 +108,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="forms\form_patient_preview.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="forms\form_patient_preview.Designer.cs">
+      <DependentUpon>form_patient_preview.cs</DependentUpon>
+    </Compile>
     <Compile Include="forms\main_form.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -130,8 +136,12 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="source\libs\Database.cs" />
     <Compile Include="source\libs\Logger.cs" />
+    <Compile Include="source\UIController.cs" />
     <EmbeddedResource Include="forms\form_dashboard.resx">
       <DependentUpon>form_dashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\form_patient_preview.resx">
+      <DependentUpon>form_patient_preview.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="forms\form_search.resx">
       <DependentUpon>form_search.cs</DependentUpon>

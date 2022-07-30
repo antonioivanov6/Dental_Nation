@@ -88,3 +88,4 @@ C:\Users\PC\Desktop\DentalNation\DentalNation\obj\Debug\DentalNation.csproj.Core
 C:\Users\PC\Desktop\DentalNation\DentalNation\obj\Debug\DentalNation.csproj.CopyComplete
 C:\Users\PC\Desktop\DentalNation\DentalNation\obj\Debug\DentalNation.exe
 C:\Users\PC\Desktop\DentalNation\DentalNation\obj\Debug\DentalNation.pdb
+C:\Users\PC\Desktop\DentalNation\DentalNation\obj\Debug\DentalNation.forms.form_patient_preview.resources
