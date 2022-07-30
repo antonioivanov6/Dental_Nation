@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 
+using DentalNation.source;
 using DentalNation.source.libs;
 
 namespace DentalNation
@@ -13,38 +14,26 @@ namespace DentalNation
 
             Logger.Init("DentalNation.log");
 
-            String dbConf = "SERVER=localhost;UID=admin;PASSWORD=4444;";
+            string dbConf = "SERVER=localhost;UID=admin;PASSWORD=4444;";
             Database.Init(dbConf);
+
+            UIController.Init(form_dashboard, form_search, form_patient_preview);
         }
 
 
         private void button_dashboard_Click(object sender, EventArgs e)
         {
-            Logger.Write(Level.DEBUG, "Clicked on dashboard");
-
-            form_search.Hide();
-
-            form_dashboard.Show();
-            form_dashboard.BringToFront();
+            UIController.ShowDashboard();
         }
 
         private void button_search_Click(object sender, EventArgs e)
         {
-            Logger.Write(Level.DEBUG, "Clicked on search");
-
-            form_dashboard.Hide();
-
-            form_search.Show();
-            form_search.BringToFront();
+            UIController.ShowSearch();
         }
 
         private void button_patient_preview_Click(object sender, EventArgs e)
         {
-            Logger.Write(Level.DEBUG, "Clicked on patien preview");
-
-            form_search.Hide();
-
-            form_patient_preview.Show();
+            UIController.ShowPatientPreview();
         }
     }
 }

@@ -133,10 +133,10 @@
         private System.Windows.Forms.Button button_patient_preview;
 
         //Forms
-        private System.Windows.Forms.Panel leftPanel;
-        private forms.form_dashboard form_dashboard;
-        private forms.form_search form_search;
-        private forms.form_patient_preview form_patient_preview;
+        public System.Windows.Forms.Panel leftPanel;
+        public forms.form_dashboard form_dashboard;
+        public forms.form_search form_search;
+        public forms.form_patient_preview form_patient_preview;
     }
 }
 
