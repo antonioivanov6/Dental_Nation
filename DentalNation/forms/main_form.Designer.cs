@@ -31,10 +31,8 @@
             this.leftPanel = new System.Windows.Forms.Panel();
             this.button_search = new System.Windows.Forms.Button();
             this.button_dashboard = new System.Windows.Forms.Button();
-            this.form_search_main = new DentalNation.forms.form_search();
-            this.form_dashboard_main = new DentalNation.forms.form_dashboard();
-            this.form_dashboard = new DentalNation.forms.form_dashboard();
             this.form_search = new DentalNation.forms.form_search();
+            this.form_dashboard = new DentalNation.forms.form_dashboard();
             this.leftPanel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -71,37 +69,21 @@
             this.button_dashboard.UseVisualStyleBackColor = false;
             this.button_dashboard.Click += new System.EventHandler(this.button_dashboard_Click);
             // 
-            // form_search_main
+            // form_search
             // 
-            this.form_search_main.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.form_search_main.Location = new System.Drawing.Point(274, 12);
-            this.form_search_main.Name = "form_search_main";
-            this.form_search_main.Size = new System.Drawing.Size(800, 671);
-            this.form_search_main.TabIndex = 2;
-            this.form_search_main.Load += new System.EventHandler(this.form_search_main_Load);
-            // 
-            // form_dashboard_main
-            // 
-            this.form_dashboard_main.BackColor = System.Drawing.Color.RosyBrown;
-            this.form_dashboard_main.Location = new System.Drawing.Point(274, 12);
-            this.form_dashboard_main.Name = "form_dashboard_main";
-            this.form_dashboard_main.Size = new System.Drawing.Size(800, 671);
-            this.form_dashboard_main.TabIndex = 1;
-            this.form_dashboard_main.Load += new System.EventHandler(this.form_dashboard_main_Load);
+            this.form_search.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.form_search.Location = new System.Drawing.Point(274, 12);
+            this.form_search.Name = "form_search";
+            this.form_search.Size = new System.Drawing.Size(800, 671);
+            this.form_search.TabIndex = 0;
             // 
             // form_dashboard
             // 
-            this.form_dashboard.Location = new System.Drawing.Point(0, 0);
+            this.form_dashboard.BackColor = System.Drawing.Color.RosyBrown;
+            this.form_dashboard.Location = new System.Drawing.Point(274, 12);
             this.form_dashboard.Name = "form_dashboard";
-            this.form_dashboard.Size = new System.Drawing.Size(1037, 534);
-            this.form_dashboard.TabIndex = 0;
-            // 
-            // form_search
-            // 
-            this.form_search.Location = new System.Drawing.Point(0, 0);
-            this.form_search.Name = "form_search";
-            this.form_search.Size = new System.Drawing.Size(1127, 566);
-            this.form_search.TabIndex = 0;
+            this.form_dashboard.Size = new System.Drawing.Size(800, 671);
+            this.form_dashboard.TabIndex = 1;
             // 
             // form_main
             // 
@@ -110,8 +92,8 @@
             this.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.ClientSize = new System.Drawing.Size(1086, 695);
             this.Controls.Add(this.leftPanel);
-            this.Controls.Add(this.form_search_main);
-            this.Controls.Add(this.form_dashboard_main);
+            this.Controls.Add(this.form_dashboard);
+            this.Controls.Add(this.form_search);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "form_main";
@@ -127,8 +109,6 @@
         private forms.form_search form_search;
         private System.Windows.Forms.Button button_search;
         private System.Windows.Forms.Button button_dashboard;
-        private forms.form_dashboard form_dashboard_main;
-        private forms.form_search form_search_main;
     }
 }
 

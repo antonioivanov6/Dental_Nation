@@ -36,7 +36,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.RosyBrown;
             this.Name = "form_dashboard";
-            this.Size = new System.Drawing.Size(992, 563);
+            this.Size = new System.Drawing.Size(1051, 612);
+            this.Load += new System.EventHandler(this.form_dashboard_Load);
             this.ResumeLayout(false);
 
         }

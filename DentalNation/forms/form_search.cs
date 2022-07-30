@@ -16,5 +16,10 @@ namespace DentalNation.forms
         {
             InitializeComponent();
         }
+
+        private void form_search_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -22,20 +22,20 @@ namespace DentalNation
         {
             Logger.Write(Level.DEBUG, "Clicked on dashboard");
 
-            form_search_main.Hide();
+            form_search.Hide();
 
-            form_dashboard_main.Show();
-            form_dashboard_main.BringToFront();
+            form_dashboard.Show();
+            form_dashboard.BringToFront();
         }
 
         private void button_search_Click(object sender, EventArgs e)
         {
             Logger.Write(Level.DEBUG, "Clicked on search");
 
-            form_dashboard_main.Hide();
+            form_dashboard.Hide();
 
-            form_search_main.Show();
-            form_search_main.BringToFront();
+            form_search.Show();
+            form_search.BringToFront();
         }
 
         private void form_search_main_Load(object sender, EventArgs e)

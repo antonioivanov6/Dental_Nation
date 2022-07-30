@@ -16,5 +16,10 @@ namespace DentalNation.forms
         {
             InitializeComponent();
         }
+
+        private void form_dashboard_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
