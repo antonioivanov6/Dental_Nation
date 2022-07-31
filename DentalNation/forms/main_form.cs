@@ -21,14 +21,14 @@ namespace DentalNation
 
             //test
             //Storage.InsertNewPatient("bai_hui", "1234", "44445555", "kura@qnko");
-            DBResult res = Storage.FindPatient();
-            for(int i = 0; i < res.rows.Count; i++)
-            {
-                Logger.Write(Level.DEBUG, "Field: " + res.rows[i].fields[0]);
-                Logger.Write(Level.DEBUG, "Field: " + res.rows[i].fields[1]);
-                Logger.Write(Level.DEBUG, "Field: " + res.rows[i].fields[2]);
-                Logger.Write(Level.DEBUG, "Field: " + res.rows[i].fields[3]);
-            }
+            //DBResult res = Storage.FindPatient();
+            //foreach (DBRows row in res.rows)   
+            //{
+                //Logger.Write(Level.DEBUG, "Field: " + row.fields[0]);
+               // Logger.Write(Level.DEBUG, "Field: " + row.fields[1]);
+               // Logger.Write(Level.DEBUG, "Field: " + row.fields[2]);
+               // Logger.Write(Level.DEBUG, "Field: " + row.fields[3]);
+            //}
         }
 
 

@@ -7,7 +7,7 @@ namespace DentalNation.source
     {
         static public void Init(
             form_dashboard form_Dashboard,
-            form_search form_Search,
+            button_search form_Search,
             form_patient_preview form_Patient_Preview)
         {
             _form_Dashboard       = form_Dashboard;
@@ -46,7 +46,7 @@ namespace DentalNation.source
         }
 
         static private form_dashboard       _form_Dashboard;
-        static private form_search          _form_Search;
+        static private button_search          _form_Search;
         static private form_patient_preview _form_Patient_Preview;
     }
 }

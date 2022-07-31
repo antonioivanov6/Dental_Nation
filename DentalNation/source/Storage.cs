@@ -29,9 +29,12 @@ namespace DentalNation.source
             return res.error.hasError;
         }
 
-        static public DBResult FindPatient()
+        static public DBResult FindPatient(string nameOrEgn)
         {
-            string query = "SELECT name, egn, gsm, email FROM patients";
+            string query = "SELECT name, egn, gsm, email " +
+                           "  FROM patients " +  
+                           " WHERE name LIKE '%" + nameOrEgn + "%' " +
+                           "    OR egn LIKE '%" + nameOrEgn + "%';";
 
             DBResult res = db.Read(query);
 

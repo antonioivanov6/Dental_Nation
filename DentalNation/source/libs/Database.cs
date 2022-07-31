@@ -169,8 +169,11 @@ namespace DentalNation.source.libs
                     row.fields.Add(reader[i].ToString());
                 }
                 dBResult.rows.Add(row);
+
+                dBResult.affecredRows++;
             }
 
+            connection.Close();
             return dBResult;
         }
 
