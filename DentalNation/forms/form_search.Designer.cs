@@ -35,6 +35,9 @@
             this.p_egn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.p_gsm = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.p_email = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.f_search_button_open = new System.Windows.Forms.Button();
+            this.f_search_button_edit = new System.Windows.Forms.Button();
+            this.f_search_button_delete = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.data_table_patients)).BeginInit();
             this.SuspendLayout();
             // 
@@ -95,9 +98,42 @@
             this.p_email.HeaderText = "Email";
             this.p_email.Name = "p_email";
             // 
+            // f_search_button_open
+            // 
+            this.f_search_button_open.Location = new System.Drawing.Point(41, 454);
+            this.f_search_button_open.Name = "f_search_button_open";
+            this.f_search_button_open.Size = new System.Drawing.Size(75, 23);
+            this.f_search_button_open.TabIndex = 3;
+            this.f_search_button_open.Text = "Open";
+            this.f_search_button_open.UseVisualStyleBackColor = true;
+            this.f_search_button_open.Click += new System.EventHandler(this.f_search_button_open_Click);
+            // 
+            // f_search_button_edit
+            // 
+            this.f_search_button_edit.Location = new System.Drawing.Point(255, 454);
+            this.f_search_button_edit.Name = "f_search_button_edit";
+            this.f_search_button_edit.Size = new System.Drawing.Size(75, 23);
+            this.f_search_button_edit.TabIndex = 4;
+            this.f_search_button_edit.Text = "Edit";
+            this.f_search_button_edit.UseVisualStyleBackColor = true;
+            this.f_search_button_edit.Click += new System.EventHandler(this.f_search_button_edit_Click);
+            // 
+            // f_search_button_delete
+            // 
+            this.f_search_button_delete.Location = new System.Drawing.Point(488, 454);
+            this.f_search_button_delete.Name = "f_search_button_delete";
+            this.f_search_button_delete.Size = new System.Drawing.Size(75, 23);
+            this.f_search_button_delete.TabIndex = 5;
+            this.f_search_button_delete.Text = "Delete";
+            this.f_search_button_delete.UseVisualStyleBackColor = true;
+            this.f_search_button_delete.Click += new System.EventHandler(this.f_search_button_delete_Click);
+            // 
             // button_search
             // 
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.Controls.Add(this.f_search_button_delete);
+            this.Controls.Add(this.f_search_button_edit);
+            this.Controls.Add(this.f_search_button_open);
             this.Controls.Add(this.data_table_patients);
             this.Controls.Add(this.f_search_button_search);
             this.Controls.Add(this.f_search_text_box);
@@ -118,5 +154,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn p_egn;
         private System.Windows.Forms.DataGridViewTextBoxColumn p_gsm;
         private System.Windows.Forms.DataGridViewTextBoxColumn p_email;
+        private System.Windows.Forms.Button f_search_button_open;
+        private System.Windows.Forms.Button f_search_button_edit;
+        private System.Windows.Forms.Button f_search_button_delete;
     }
 }

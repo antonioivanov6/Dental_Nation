@@ -11,6 +11,7 @@ namespace DentalNation.forms
         public button_search()
         {
             InitializeComponent();
+            data_table_patients.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
         }
 
         private void f_search_text_box_TextChanged(object sender, EventArgs e)
@@ -30,15 +31,26 @@ namespace DentalNation.forms
             {
                 data_table_patients.Rows.Add(row.fields[0],
                     row.fields[1], row.fields[2], row.fields[3]);
-
-/*                for (int i = 0; i < data_table_patients.Columns.Count; i++)
-                {
-                    data_table_patients.Columns[i].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
-                }*/
             }
         }
 
         private void data_table_patients_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void f_search_button_open_Click(object sender, EventArgs e)
+        {
+            Logger.Write(Level.DEBUG, "SelectetRow: " +
+                data_table_patients.SelectedCells[0].Value);
+        }
+
+        private void f_search_button_edit_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void f_search_button_delete_Click(object sender, EventArgs e)
         {
 
         }
