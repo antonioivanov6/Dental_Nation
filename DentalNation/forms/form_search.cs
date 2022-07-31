@@ -54,5 +54,10 @@ namespace DentalNation.forms
         {
 
         }
+
+        private void f_search_button_create_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

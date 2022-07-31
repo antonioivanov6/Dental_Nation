@@ -38,7 +38,6 @@ C:\Users\PC\Desktop\DentalNation\DentalNation\obj\Debug\DentalNation.csproj.Asse
 C:\Users\PC\Desktop\DentalNation\DentalNation\obj\Debug\DentalNation.csproj.SuggestedBindingRedirects.cache
 C:\Users\PC\Desktop\DentalNation\DentalNation\obj\Debug\DentalNation.forms.form_dashboard.resources
 C:\Users\PC\Desktop\DentalNation\DentalNation\obj\Debug\DentalNation.forms.form_patient_preview.resources
-C:\Users\PC\Desktop\DentalNation\DentalNation\obj\Debug\DentalNation.forms.form_search.resources
 C:\Users\PC\Desktop\DentalNation\DentalNation\obj\Debug\DentalNation.form_main.resources
 C:\Users\PC\Desktop\DentalNation\DentalNation\obj\Debug\DentalNation.Properties.Resources.resources
 C:\Users\PC\Desktop\DentalNation\DentalNation\obj\Debug\DentalNation.csproj.GenerateResource.cache
@@ -86,3 +85,4 @@ C:\Users\HP-ProBook\Desktop\DentalNation\DentalNation\obj\Debug\DentalNation.csp
 C:\Users\HP-ProBook\Desktop\DentalNation\DentalNation\obj\Debug\DentalNation.exe
 C:\Users\HP-ProBook\Desktop\DentalNation\DentalNation\obj\Debug\DentalNation.pdb
 C:\Users\HP-ProBook\Desktop\DentalNation\DentalNation\obj\Debug\DentalNation.forms.button_search.resources
+C:\Users\PC\Desktop\DentalNation\DentalNation\obj\Debug\DentalNation.forms.button_search.resources

@@ -18,17 +18,6 @@ namespace DentalNation
 
             UIController.Init(form_dashboard, form_search, form_patient_preview);
             UIController.ShowDashboard();
-
-            //test
-            //Storage.InsertNewPatient("bai_hui", "1234", "44445555", "kura@qnko");
-            //DBResult res = Storage.FindPatient();
-            //foreach (DBRows row in res.rows)   
-            //{
-                //Logger.Write(Level.DEBUG, "Field: " + row.fields[0]);
-               // Logger.Write(Level.DEBUG, "Field: " + row.fields[1]);
-               // Logger.Write(Level.DEBUG, "Field: " + row.fields[2]);
-               // Logger.Write(Level.DEBUG, "Field: " + row.fields[3]);
-            //}
         }
 
 
