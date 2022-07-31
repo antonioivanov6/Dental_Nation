@@ -14,11 +14,21 @@ namespace DentalNation
 
             Logger.Init("DentalNation.log");
 
-            string dbConf = "SERVER=localhost;UID=admin;PASSWORD=4444;";
-            Database.Init(dbConf);
+            Storage.Init("localhost", "admin", "4444");
 
             UIController.Init(form_dashboard, form_search, form_patient_preview);
             UIController.ShowDashboard();
+
+            //test
+            //Storage.InsertNewPatient("bai_hui", "1234", "44445555", "kura@qnko");
+            DBResult res = Storage.FindPatient();
+            for(int i = 0; i < res.rows.Count; i++)
+            {
+                Logger.Write(Level.DEBUG, "Field: " + res.rows[i].fields[0]);
+                Logger.Write(Level.DEBUG, "Field: " + res.rows[i].fields[1]);
+                Logger.Write(Level.DEBUG, "Field: " + res.rows[i].fields[2]);
+                Logger.Write(Level.DEBUG, "Field: " + res.rows[i].fields[3]);
+            }
         }
 
 

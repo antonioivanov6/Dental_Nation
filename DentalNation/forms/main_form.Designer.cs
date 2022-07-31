@@ -45,17 +45,17 @@
             this.leftPanel.Controls.Add(this.button_dashboard);
             this.leftPanel.Dock = System.Windows.Forms.DockStyle.Left;
             this.leftPanel.Location = new System.Drawing.Point(0, 0);
-            this.leftPanel.Margin = new System.Windows.Forms.Padding(4);
             this.leftPanel.Name = "leftPanel";
-            this.leftPanel.Size = new System.Drawing.Size(267, 695);
+            this.leftPanel.Size = new System.Drawing.Size(200, 565);
             this.leftPanel.TabIndex = 0;
             // 
             // button_patient_preview
             // 
             this.button_patient_preview.BackColor = System.Drawing.Color.LemonChiffon;
-            this.button_patient_preview.Location = new System.Drawing.Point(59, 350);
+            this.button_patient_preview.Location = new System.Drawing.Point(44, 284);
+            this.button_patient_preview.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button_patient_preview.Name = "button_patient_preview";
-            this.button_patient_preview.Size = new System.Drawing.Size(158, 35);
+            this.button_patient_preview.Size = new System.Drawing.Size(118, 28);
             this.button_patient_preview.TabIndex = 2;
             this.button_patient_preview.Text = "Patient Preview";
             this.button_patient_preview.UseVisualStyleBackColor = false;
@@ -64,9 +64,10 @@
             // button_search
             // 
             this.button_search.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.button_search.Location = new System.Drawing.Point(59, 284);
+            this.button_search.Location = new System.Drawing.Point(44, 231);
+            this.button_search.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button_search.Name = "button_search";
-            this.button_search.Size = new System.Drawing.Size(158, 35);
+            this.button_search.Size = new System.Drawing.Size(118, 28);
             this.button_search.TabIndex = 1;
             this.button_search.Text = "Search";
             this.button_search.UseVisualStyleBackColor = false;
@@ -75,9 +76,10 @@
             // button_dashboard
             // 
             this.button_dashboard.BackColor = System.Drawing.Color.RosyBrown;
-            this.button_dashboard.Location = new System.Drawing.Point(59, 214);
+            this.button_dashboard.Location = new System.Drawing.Point(44, 174);
+            this.button_dashboard.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button_dashboard.Name = "button_dashboard";
-            this.button_dashboard.Size = new System.Drawing.Size(158, 35);
+            this.button_dashboard.Size = new System.Drawing.Size(118, 28);
             this.button_dashboard.TabIndex = 0;
             this.button_dashboard.Text = "Dashboard";
             this.button_dashboard.UseVisualStyleBackColor = false;
@@ -86,39 +88,41 @@
             // form_dashboard
             // 
             this.form_dashboard.BackColor = System.Drawing.Color.RosyBrown;
-            this.form_dashboard.Location = new System.Drawing.Point(274, 12);
+            this.form_dashboard.Location = new System.Drawing.Point(206, 10);
+            this.form_dashboard.Margin = new System.Windows.Forms.Padding(2);
             this.form_dashboard.Name = "form_dashboard";
-            this.form_dashboard.Size = new System.Drawing.Size(800, 671);
+            this.form_dashboard.Size = new System.Drawing.Size(600, 545);
             this.form_dashboard.TabIndex = 1;
             // 
             // form_search
             // 
             this.form_search.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.form_search.Location = new System.Drawing.Point(274, 12);
+            this.form_search.Location = new System.Drawing.Point(206, 10);
+            this.form_search.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.form_search.Name = "form_search";
-            this.form_search.Size = new System.Drawing.Size(800, 671);
+            this.form_search.Size = new System.Drawing.Size(600, 545);
             this.form_search.TabIndex = 0;
             // 
-            // form_patient_preview1
+            // form_patient_preview
             // 
             this.form_patient_preview.BackColor = System.Drawing.Color.LemonChiffon;
-            this.form_patient_preview.Location = new System.Drawing.Point(274, 12);
-            this.form_patient_preview.Name = "form_patient_preview1";
-            this.form_patient_preview.Size = new System.Drawing.Size(800, 671);
+            this.form_patient_preview.Location = new System.Drawing.Point(206, 10);
+            this.form_patient_preview.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.form_patient_preview.Name = "form_patient_preview";
+            this.form_patient_preview.Size = new System.Drawing.Size(600, 545);
             this.form_patient_preview.TabIndex = 2;
             // 
             // form_main
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.ClientSize = new System.Drawing.Size(1086, 695);
+            this.ClientSize = new System.Drawing.Size(814, 565);
             this.Controls.Add(this.form_patient_preview);
             this.Controls.Add(this.leftPanel);
             this.Controls.Add(this.form_dashboard);
             this.Controls.Add(this.form_search);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "form_main";
             this.leftPanel.ResumeLayout(false);
             this.ResumeLayout(false);
