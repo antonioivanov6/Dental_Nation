@@ -1,5 +1,6 @@
 ﻿
 using DentalNation.forms;
+using DentalNation.popup;
 
 namespace DentalNation.source
 {
@@ -10,6 +11,7 @@ namespace DentalNation.source
             button_search form_Search,
             form_patient_preview form_Patient_Preview)
         {
+            //Forms
             _form_Dashboard       = form_Dashboard;
             _form_Search          = form_Search;
             _form_Patient_Preview = form_Patient_Preview;
@@ -45,8 +47,15 @@ namespace DentalNation.source
             _form_Patient_Preview.BringToFront();
         }
 
+        static public void ShowPopUpCreatePatient()
+        {
+            pop_up_create_patient popUp = new pop_up_create_patient();
+            popUp.Show();
+        }
+
+        //Forms
         static private form_dashboard       _form_Dashboard;
-        static private button_search          _form_Search;
+        static private button_search        _form_Search;
         static private form_patient_preview _form_Patient_Preview;
     }
 }
