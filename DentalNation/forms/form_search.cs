@@ -47,7 +47,12 @@ namespace DentalNation.forms
 
         private void f_search_button_edit_Click(object sender, EventArgs e)
         {
+            string name = data_table_patients.SelectedCells[0].Value.ToString();
+            string egn = data_table_patients.SelectedCells[1].Value.ToString();
+            string gsm = data_table_patients.SelectedCells[2].Value.ToString();
+            string email = data_table_patients.SelectedCells[3].Value.ToString();
 
+            UIController.ShowPopUpEditPatient(name, egn, gsm, email);
         }
 
         private void f_search_button_delete_Click(object sender, EventArgs e)

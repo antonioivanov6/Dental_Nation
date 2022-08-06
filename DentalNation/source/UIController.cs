@@ -63,6 +63,16 @@ namespace DentalNation.source
             //popUp.StartPosition = FormStartPosition.CenterParent;
         }
 
+        static public void ShowPopUpEditPatient(string name,
+            string egn,
+            string gsm,
+            string email)
+        {
+            pop_up_edit_patient popUp = new pop_up_edit_patient(name, egn, gsm, email);
+            _form_Main.Enabled = false;
+            popUp.Show();
+        }
+
         //Forms
         static private form_main _form_Main;
         static private form_dashboard _form_Dashboard;

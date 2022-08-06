@@ -88,3 +88,4 @@ C:\Users\PC\Desktop\DentalNation\DentalNation\obj\Debug\DentalNation.forms.butto
 C:\Users\PC\Desktop\DentalNation\DentalNation\obj\Debug\DentalNation.popup.pop_up_create_patient.resources
 C:\Users\HP-ProBook\Desktop\DentalNation\DentalNation\obj\Debug\DentalNation.popup.pop_up_create_patient.resources
 C:\Users\HP-ProBook\Desktop\DentalNation\DentalNation\obj\Debug\DentalNation.forms.form_search.resources
+C:\Users\HP-ProBook\Desktop\DentalNation\DentalNation\obj\Debug\DentalNation.popup.pop_up_edit_patient.resources

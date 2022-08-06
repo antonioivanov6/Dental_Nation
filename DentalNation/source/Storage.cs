@@ -46,6 +46,25 @@ namespace DentalNation.source
             return res;
         }
 
+        static public DBResult EditPatient(string name, string egn, string gsm, string email)
+        {
+            string query = "UPDATE patients " +
+                           "   SET name = '" + name + "', " +
+                           "        egn = '" + egn + "', " +
+                           "        gsm = '" + gsm + "', " +
+                           "      email = '" + email + "' " +
+                           "  WHERE egn = '" + egn + "' ";
+
+            DBResult res = db.Execute(query);
+
+            if (res.error.hasError)
+            {
+                Logger.Write(Level.DEBUG, "ErrorMsg: " + res.error.errorMsg);
+            }
+
+            return res;
+        }
+
         static public void InsertNewStatus()
         {
 

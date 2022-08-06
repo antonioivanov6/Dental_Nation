@@ -34,6 +34,7 @@ namespace DentalNation.popup
             else
             {
                 Logger.Write(Level.ERROR, res.error.errorMsg);
+                MessageBox.Show(res.error.errorMsg);
             }
         }
 
@@ -54,6 +55,7 @@ namespace DentalNation.popup
             else
             {
                 Logger.Write(Level.ERROR, res.error.errorMsg);
+                MessageBox.Show(res.error.errorMsg);
             }
         }
     }
