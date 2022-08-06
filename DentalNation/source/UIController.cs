@@ -58,9 +58,9 @@ namespace DentalNation.source
         static public void ShowPopUpCreatePatient()
         {
             pop_up_create_patient popUp = new pop_up_create_patient();
-            popUp.StartPosition = FormStartPosition.CenterParent;
             _form_Main.Enabled = false;
             popUp.Show();
+            //popUp.StartPosition = FormStartPosition.CenterParent;
         }
 
         //Forms

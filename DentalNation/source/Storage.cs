@@ -11,7 +11,7 @@ namespace DentalNation.source
             db.DbInit();
         }
 
-        static public bool InsertNewPatient(string name, string egn, string gsm, string email)
+        static public DBResult InsertNewPatient(string name, string egn, string gsm, string email)
         {
             string query = "INSERT INTO patients (name, egn, gsm, email)" +
                            "VALUES ('" + name + "'," +
@@ -26,7 +26,7 @@ namespace DentalNation.source
                 Logger.Write(Level.DEBUG, "ErrorMsg: " + res.error.errorMsg);
             }
 
-            return res.error.hasError;
+            return res;
         }
 
         static public DBResult FindPatient(string nameOrEgn)
