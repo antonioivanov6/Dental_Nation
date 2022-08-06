@@ -65,6 +65,20 @@ namespace DentalNation.source
             return res;
         }
 
+        static public DBResult DeletePatient(string egn)
+        {
+            string query = "DELETE FROM patients WHERE egn = '" + egn + "'";
+
+            DBResult res = db.Execute(query);
+
+            if (res.error.hasError)
+            {
+                Logger.Write(Level.DEBUG, "ErrorMsg: " + res.error.errorMsg);
+            }
+
+            return res;
+        }
+
         static public void InsertNewStatus()
         {
 

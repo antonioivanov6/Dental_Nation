@@ -8,11 +8,6 @@ namespace DentalNation.popup
 {
     public partial class pop_up_edit_patient : Form
     {
-        string oldName;
-        string oldEgn;
-        string oldGsm;
-        string oldEmail;
-
         public pop_up_edit_patient(string name,
             string egn,
             string gsm,
@@ -20,15 +15,10 @@ namespace DentalNation.popup
         {
             InitializeComponent();
 
-            oldName = name;
-            oldEgn = egn;
-            oldGsm = gsm;
-            oldEmail = email;
-
-            p_edit_patient_textBox_name.Text = oldName;
-            p_edit_patient_textBox_egn.Text = oldEgn;
-            p_edit_patient_textBox_gsm.Text = oldGsm;
-            p_edit_patient_textBox_email.Text = oldEmail;
+            p_edit_patient_textBox_name.Text = name;
+            p_edit_patient_textBox_egn.Text = egn;
+            p_edit_patient_textBox_gsm.Text = gsm;
+            p_edit_patient_textBox_email.Text = email;
         }
 
         protected override void OnFormClosing(FormClosingEventArgs e)
