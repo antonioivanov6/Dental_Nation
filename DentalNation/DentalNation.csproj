@@ -128,6 +128,7 @@
     </Compile>
     <Compile Include="source\app\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="source\libs\Config.cs" />
     <Compile Include="source\libs\Database.cs" />
     <Compile Include="source\libs\Logger.cs" />
     <Compile Include="source\Storage.cs" />

@@ -31,8 +31,19 @@ namespace DentalNation.forms
 
         private void f_search_button_open_Click(object sender, EventArgs e)
         {
-            Logger.Write(Level.DEBUG, "SelectetRow: " +
-                data_table_patients.SelectedCells[0].Value);
+            try
+            {
+                string name = data_table_patients.SelectedCells[0].Value.ToString();
+                string egn = data_table_patients.SelectedCells[1].Value.ToString();
+                string gsm = data_table_patients.SelectedCells[2].Value.ToString();
+                string email = data_table_patients.SelectedCells[3].Value.ToString();
+
+                UIController.ShowPatientPreview(name, egn, gsm, email);
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void f_search_button_edit_Click(object sender, EventArgs e)
@@ -44,7 +55,7 @@ namespace DentalNation.forms
                 string gsm = data_table_patients.SelectedCells[2].Value.ToString();
                 string email = data_table_patients.SelectedCells[3].Value.ToString();
 
-                UIController.ShowPopUpEditPatient(name, egn, gsm, email);
+                UIController.ShowPatientPreview(name, egn, gsm, email);
             }
             catch(Exception ex)
             {

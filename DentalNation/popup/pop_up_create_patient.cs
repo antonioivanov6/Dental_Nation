@@ -40,16 +40,17 @@ namespace DentalNation.popup
 
         private void p_create_patient_button_save_and_work_Click(object sender, System.EventArgs e)
         {
-            DBResult res = Storage.InsertNewPatient(
-                p_create_patient_textBox_name.Text,
-                p_create_patient_textBox_egn.Text,
-                p_create_patient_textBox_gsm.Text,
-                p_create_patient_textBox_email.Text);
+            string name = p_create_patient_textBox_name.Text;
+            string egn = p_create_patient_textBox_egn.Text;
+            string gsm = p_create_patient_textBox_gsm.Text;
+            string email = p_create_patient_textBox_email.Text;
+
+            DBResult res = Storage.InsertNewPatient(name, egn, gsm, email);
 
             if (!res.error.hasError)
             {
                 UIController.RestoreMainFocus();
-                UIController.ShowPatientPreview();
+                UIController.ShowPatientPreview(name, egn, gsm, email);
                 Close();
             }
             else

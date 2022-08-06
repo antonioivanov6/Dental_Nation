@@ -14,6 +14,8 @@ namespace DentalNation
 
             Logger.Init("DentalNation.log");
 
+            Config.Init("Materials.txt");
+
             Storage.Init("localhost", "admin", "4444");
 
             UIController.Init(this, form_dashboard, form_search, form_patient_preview);
@@ -33,7 +35,7 @@ namespace DentalNation
 
         private void button_patient_preview_Click(object sender, EventArgs e)
         {
-            UIController.ShowPatientPreview();
+            UIController.ShowPatientPreviewNoData();
         }
     }
 }

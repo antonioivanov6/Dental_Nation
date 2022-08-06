@@ -45,7 +45,18 @@ namespace DentalNation.source
             _form_Search.BringToFront();
         }
 
-        static public void ShowPatientPreview()
+        static public void ShowPatientPreview(string name, string egn, string gsm, string email)
+        {
+            //Close others
+            _form_Dashboard.Hide();
+            _form_Search.Hide();
+            //Show
+            _form_Patient_Preview.Show();
+            _form_Patient_Preview.loadPatinetInfo(name, egn, gsm, email);
+            _form_Patient_Preview.BringToFront();
+        }
+
+        static public void ShowPatientPreviewNoData()
         {
             //Close others
             _form_Dashboard.Hide();
