@@ -1,20 +1,28 @@
 ﻿
 using DentalNation.forms;
 using DentalNation.popup;
+using System.Windows.Forms;
 
 namespace DentalNation.source
 {
     internal class UIController
     {
         static public void Init(
+            form_main form_Main,
             form_dashboard form_Dashboard,
-            button_search form_Search,
+            form_search form_Search,
             form_patient_preview form_Patient_Preview)
         {
             //Forms
-            _form_Dashboard       = form_Dashboard;
-            _form_Search          = form_Search;
+            _form_Main = form_Main;
+            _form_Dashboard = form_Dashboard;
+            _form_Search = form_Search;
             _form_Patient_Preview = form_Patient_Preview;
+        }
+
+        static public void RestoreMainFocus()
+        {
+            _form_Main.Enabled = true;
         }
 
         static public void ShowDashboard()
@@ -50,12 +58,15 @@ namespace DentalNation.source
         static public void ShowPopUpCreatePatient()
         {
             pop_up_create_patient popUp = new pop_up_create_patient();
+            popUp.StartPosition = FormStartPosition.CenterParent;
+            _form_Main.Enabled = false;
             popUp.Show();
         }
 
         //Forms
-        static private form_dashboard       _form_Dashboard;
-        static private button_search        _form_Search;
+        static private form_main _form_Main;
+        static private form_dashboard _form_Dashboard;
+        static private form_search _form_Search;
         static private form_patient_preview _form_Patient_Preview;
     }
 }

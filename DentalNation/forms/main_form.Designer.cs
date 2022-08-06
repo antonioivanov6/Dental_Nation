@@ -33,7 +33,7 @@
             this.button_search = new System.Windows.Forms.Button();
             this.button_dashboard = new System.Windows.Forms.Button();
             this.form_dashboard = new DentalNation.forms.form_dashboard();
-            this.form_search = new DentalNation.forms.button_search();
+            this.form_search = new DentalNation.forms.form_search();
             this.form_patient_preview = new DentalNation.forms.form_patient_preview();
             this.leftPanel.SuspendLayout();
             this.SuspendLayout();
@@ -141,7 +141,7 @@
 
         //Forms
         public forms.form_dashboard       form_dashboard;
-        public forms.button_search          form_search;
+        public forms.form_search          form_search;
         public forms.form_patient_preview form_patient_preview;
     }   
 }

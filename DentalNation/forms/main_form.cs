@@ -16,7 +16,7 @@ namespace DentalNation
 
             Storage.Init("localhost", "admin", "4444");
 
-            UIController.Init(form_dashboard, form_search, form_patient_preview);
+            UIController.Init(this, form_dashboard, form_search, form_patient_preview);
             UIController.ShowDashboard();
         }
 

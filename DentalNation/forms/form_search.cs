@@ -6,9 +6,9 @@ using DentalNation.source.libs;
 
 namespace DentalNation.forms
 {
-    public partial class button_search : UserControl
+    public partial class form_search : UserControl
     {
-        public button_search()
+        public form_search()
         {
             InitializeComponent();
             data_table_patients.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
@@ -57,6 +57,7 @@ namespace DentalNation.forms
 
         private void f_search_button_create_Click(object sender, EventArgs e)
         {
+            
             UIController.ShowPopUpCreatePatient();
         }
     }

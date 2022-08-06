@@ -1,6 +1,6 @@
 ﻿namespace DentalNation.forms
 {
-    partial class button_search
+    partial class form_search
     {
         /// <summary> 
         /// Required designer variable.
