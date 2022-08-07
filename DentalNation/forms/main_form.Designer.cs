@@ -45,9 +45,9 @@
             this.leftPanel.Controls.Add(this.button_dashboard);
             this.leftPanel.Dock = System.Windows.Forms.DockStyle.Left;
             this.leftPanel.Location = new System.Drawing.Point(0, 0);
-            this.leftPanel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.leftPanel.Margin = new System.Windows.Forms.Padding(4);
             this.leftPanel.Name = "leftPanel";
-            this.leftPanel.Size = new System.Drawing.Size(267, 773);
+            this.leftPanel.Size = new System.Drawing.Size(267, 976);
             this.leftPanel.TabIndex = 0;
             // 
             // button_patient_preview
@@ -92,7 +92,7 @@
             this.form_search.Location = new System.Drawing.Point(275, 12);
             this.form_search.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.form_search.Name = "form_search";
-            this.form_search.Size = new System.Drawing.Size(1032, 750);
+            this.form_search.Size = new System.Drawing.Size(1291, 953);
             this.form_search.TabIndex = 0;
             // 
             // form_patient_preview
@@ -101,7 +101,7 @@
             this.form_patient_preview.Location = new System.Drawing.Point(275, 12);
             this.form_patient_preview.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.form_patient_preview.Name = "form_patient_preview";
-            this.form_patient_preview.Size = new System.Drawing.Size(1032, 750);
+            this.form_patient_preview.Size = new System.Drawing.Size(1291, 953);
             this.form_patient_preview.TabIndex = 2;
             // 
             // form_dashboard
@@ -110,7 +110,7 @@
             this.form_dashboard.Location = new System.Drawing.Point(275, 12);
             this.form_dashboard.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.form_dashboard.Name = "form_dashboard";
-            this.form_dashboard.Size = new System.Drawing.Size(1032, 750);
+            this.form_dashboard.Size = new System.Drawing.Size(1291, 953);
             this.form_dashboard.TabIndex = 1;
             // 
             // form_main
@@ -118,13 +118,13 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.ClientSize = new System.Drawing.Size(1319, 773);
+            this.ClientSize = new System.Drawing.Size(1578, 976);
             this.Controls.Add(this.leftPanel);
+            this.Controls.Add(this.form_patient_preview);
             this.Controls.Add(this.form_dashboard);
             this.Controls.Add(this.form_search);
-            this.Controls.Add(this.form_patient_preview);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "form_main";
             this.leftPanel.ResumeLayout(false);
             this.ResumeLayout(false);

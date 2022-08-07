@@ -34,5 +34,10 @@ namespace DentalNation.source.libs
                 }
             }
         }
+
+        static public List<KeyValuePair<string, List<string>>> GetValues()
+        {
+            return config;
+        }
     }
 }

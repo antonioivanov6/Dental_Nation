@@ -55,7 +55,7 @@ namespace DentalNation.forms
                 string gsm = data_table_patients.SelectedCells[2].Value.ToString();
                 string email = data_table_patients.SelectedCells[3].Value.ToString();
 
-                UIController.ShowPatientPreview(name, egn, gsm, email);
+                UIController.ShowPopUpEditPatient(name, egn, gsm, email);
             }
             catch(Exception ex)
             {
