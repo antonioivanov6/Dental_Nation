@@ -166,6 +166,34 @@ namespace DentalNation.source
             return res;
         }
 
+        static public DBResult CreateNewStatus(string date, string diagnosis, string manipulation, string price)
+        {
+            string query = "";
+
+            DBResult res = db.Execute(query);
+
+            if (res.error.hasError)
+            {
+                Logger.Write(Level.DEBUG, "ErrorMsg: " + res.error.errorMsg);
+            }
+
+            return res;
+        }
+
+        static public DBResult EditStatus(string date, string diagnosis, string manipulation, string price)
+        {
+            string query = "";
+
+            DBResult res = db.Execute(query);
+
+            if (res.error.hasError)
+            {
+                Logger.Write(Level.DEBUG, "ErrorMsg: " + res.error.errorMsg);
+            }
+
+            return res;
+        }
+
         static private Database db;
     }
 }

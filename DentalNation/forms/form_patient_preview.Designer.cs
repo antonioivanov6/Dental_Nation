@@ -1290,7 +1290,7 @@
             this.add_material_button.Location = new System.Drawing.Point(757, 676);
             this.add_material_button.Margin = new System.Windows.Forms.Padding(2);
             this.add_material_button.Name = "add_material_button";
-            this.add_material_button.Size = new System.Drawing.Size(56, 29);
+            this.add_material_button.Size = new System.Drawing.Size(79, 29);
             this.add_material_button.TabIndex = 101;
             this.add_material_button.Text = "Add Material";
             this.add_material_button.UseVisualStyleBackColor = true;

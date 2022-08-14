@@ -120,11 +120,23 @@
     <Compile Include="popup\pop_up_create_patient.Designer.cs">
       <DependentUpon>pop_up_create_patient.cs</DependentUpon>
     </Compile>
+    <Compile Include="popup\pop_up_create_status.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="popup\pop_up_create_status.Designer.cs">
+      <DependentUpon>pop_up_create_status.cs</DependentUpon>
+    </Compile>
     <Compile Include="popup\pop_up_edit_patient.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="popup\pop_up_edit_patient.Designer.cs">
       <DependentUpon>pop_up_edit_patient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="popup\pop_up_edit_status.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="popup\pop_up_edit_status.Designer.cs">
+      <DependentUpon>pop_up_edit_status.cs</DependentUpon>
     </Compile>
     <Compile Include="source\app\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
