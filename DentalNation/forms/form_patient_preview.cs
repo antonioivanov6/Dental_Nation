@@ -16,6 +16,7 @@ namespace DentalNation.forms
         public form_patient_preview()
         {
             InitializeComponent();
+            //data_table_status.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
 
             keyValuePairs = new Dictionary<string, string>();
             keyValuePairs.Add("0",  "");
@@ -74,6 +75,35 @@ namespace DentalNation.forms
             comboBox_z38.Items.AddRange(items);
         }
 
+        private void showStatusAndNotes()
+        {
+            //Clear Old Content
+            data_table_status.Rows.Clear();
+
+            DBResult res = Storage.LoadStatusAndNotes(egn);
+
+            foreach (DBRows row in res.rows)
+            {
+                data_table_status.Rows.Add(
+                    row.fields[0], //date
+                    row.fields[1], //diagnosis
+                    row.fields[2], //manipulation
+                    row.fields[3], //price
+                    row.fields[4], //notes
+                    row.fields[5], //materials
+                    row.fields[6]  //id
+                    );
+            }
+
+            data_table_status.ClearSelection();
+        }
+
+        private void data_table_status_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            notes_text_box.Text = data_table_status.CurrentRow.Cells[4].Value.ToString();
+            materials_text_box.Text = data_table_status.CurrentRow.Cells[5].Value.ToString();
+        }
+
         public void loadPatinetInfo(string name,
             string egn,
             string gsm,
@@ -94,6 +124,17 @@ namespace DentalNation.forms
             f_preview_textBox_email.Enabled = false;
 
             loadComboBox();
+            showStatusAndNotes();
+        }
+
+        private void materials_text_box_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void notes_text_box_TextChanged(object sender, EventArgs e)
+        {
+
         }
 
         private void loadComboBox()
@@ -297,11 +338,6 @@ namespace DentalNation.forms
         private void comboBox_z38_SelectedIndexChanged(object sender, EventArgs e)
         {
             Storage.UpdateTeeth(egn, "z38", keyValuePairs[comboBox_z38.SelectedIndex.ToString()]);
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

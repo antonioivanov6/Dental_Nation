@@ -46,7 +46,7 @@
             // 
             this.f_search_text_box.Location = new System.Drawing.Point(329, 27);
             this.f_search_text_box.Name = "f_search_text_box";
-            this.f_search_text_box.Size = new System.Drawing.Size(367, 22);
+            this.f_search_text_box.Size = new System.Drawing.Size(367, 20);
             this.f_search_text_box.TabIndex = 0;
             this.f_search_text_box.TextChanged += new System.EventHandler(this.f_search_text_box_TextChanged);
             // 
@@ -62,6 +62,7 @@
             // 
             // data_table_patients
             // 
+            this.data_table_patients.AllowUserToAddRows = false;
             this.data_table_patients.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.data_table_patients.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.p_name,

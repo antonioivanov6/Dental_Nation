@@ -150,6 +150,22 @@ namespace DentalNation.source
             return res;
         }
 
+        static public DBResult LoadStatusAndNotes(string egn)
+        {
+            string query = "SELECT date, diagnosis, manipulation, price, notes, materials, id " +
+                      "FROM status " +
+                      "WHERE egn = '" + egn + "' ";
+
+            DBResult res = db.Read(query);
+
+            if (res.error.hasError)
+            {
+                Logger.Write(Level.DEBUG, "ErrorMsg: " + res.error.errorMsg);
+            }
+
+            return res;
+        }
+
         static private Database db;
     }
 }

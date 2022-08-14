@@ -80,6 +80,7 @@ namespace DentalNation.source.libs
                                       "             diagnosis    VARCHAR(256) NULL,             " +
                                       "             manipulation VARCHAR(256) NULL,             " +
                                       "             notes        VARCHAR(512) NULL,             " +
+                                      "             materials    VARCHAR(512) NULL,             " +
                                       "             price        VARCHAR(10)  NULL,             " +
                                       "             PRIMARY KEY (id));                          ";
 

@@ -96,6 +96,8 @@ namespace DentalNation.forms
                 data_table_patients.Rows.Add(row.fields[0],
                     row.fields[1], row.fields[2], row.fields[3]);
             }
+
+            data_table_patients.ClearSelection();
         }
     }
 }
