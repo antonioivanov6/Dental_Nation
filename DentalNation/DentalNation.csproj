@@ -160,6 +160,9 @@
     <EmbeddedResource Include="popup\pop_up_create_patient.resx">
       <DependentUpon>pop_up_create_patient.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="popup\pop_up_create_status.resx">
+      <DependentUpon>pop_up_create_status.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="popup\pop_up_edit_patient.resx">
       <DependentUpon>pop_up_edit_patient.cs</DependentUpon>
     </EmbeddedResource>

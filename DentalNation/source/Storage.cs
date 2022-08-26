@@ -166,9 +166,10 @@ namespace DentalNation.source
             return res;
         }
 
-        static public DBResult CreateNewStatus(string date, string diagnosis, string manipulation, string price)
+        static public DBResult CreateNewStatus(string egn, string date, string diagnosis, string manipulation, string price)
         {
-            string query = "";
+            string query = "INSERT INTO status (egn, date, diagnosis, manipulation, price) " +
+                            "VALUES ('" + egn + "', '" + date + "', '" + diagnosis + "', '" + manipulation + "', '" + price + "')";
 
             DBResult res = db.Execute(query);
 

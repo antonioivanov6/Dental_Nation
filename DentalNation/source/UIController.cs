@@ -84,6 +84,18 @@ namespace DentalNation.source
             popUp.Show();
         }
 
+        static public void ShowPopUpCreateStatus(string egn)
+        {
+            pop_up_create_status popUp = new pop_up_create_status(egn);
+            _form_Main.Enabled = false;
+            popUp.Show();
+        }
+
+        static public void RefreshStatusAndNotes()
+        {
+            _form_Patient_Preview.showStatusAndNotes();
+        }
+
         //Forms
         static private form_main _form_Main;
         static private form_dashboard _form_Dashboard;

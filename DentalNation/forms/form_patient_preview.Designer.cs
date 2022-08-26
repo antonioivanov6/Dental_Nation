@@ -1310,30 +1310,33 @@
             this.delete_row_button.Location = new System.Drawing.Point(559, 748);
             this.delete_row_button.Margin = new System.Windows.Forms.Padding(2);
             this.delete_row_button.Name = "delete_row_button";
-            this.delete_row_button.Size = new System.Drawing.Size(56, 19);
+            this.delete_row_button.Size = new System.Drawing.Size(56, 24);
             this.delete_row_button.TabIndex = 103;
             this.delete_row_button.Text = "Delete Row";
             this.delete_row_button.UseVisualStyleBackColor = true;
+            this.delete_row_button.Click += new System.EventHandler(this.delete_row_button_Click);
             // 
             // edit_row_button
             // 
             this.edit_row_button.Location = new System.Drawing.Point(280, 748);
             this.edit_row_button.Margin = new System.Windows.Forms.Padding(2);
             this.edit_row_button.Name = "edit_row_button";
-            this.edit_row_button.Size = new System.Drawing.Size(67, 19);
+            this.edit_row_button.Size = new System.Drawing.Size(67, 24);
             this.edit_row_button.TabIndex = 104;
             this.edit_row_button.Text = "Edit Row";
             this.edit_row_button.UseVisualStyleBackColor = true;
+            this.edit_row_button.Click += new System.EventHandler(this.edit_row_button_Click);
             // 
             // new_row_button
             // 
             this.new_row_button.Location = new System.Drawing.Point(13, 747);
             this.new_row_button.Margin = new System.Windows.Forms.Padding(2);
             this.new_row_button.Name = "new_row_button";
-            this.new_row_button.Size = new System.Drawing.Size(80, 19);
+            this.new_row_button.Size = new System.Drawing.Size(80, 25);
             this.new_row_button.TabIndex = 105;
             this.new_row_button.Text = "New row";
             this.new_row_button.UseVisualStyleBackColor = true;
+            this.new_row_button.Click += new System.EventHandler(this.new_row_button_Click);
             // 
             // form_patient_preview
             // 

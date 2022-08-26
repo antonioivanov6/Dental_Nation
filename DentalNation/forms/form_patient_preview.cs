@@ -75,7 +75,7 @@ namespace DentalNation.forms
             comboBox_z38.Items.AddRange(items);
         }
 
-        private void showStatusAndNotes()
+        public void showStatusAndNotes()
         {
             //Clear Old Content
             data_table_status.Rows.Clear();
@@ -338,6 +338,21 @@ namespace DentalNation.forms
         private void comboBox_z38_SelectedIndexChanged(object sender, EventArgs e)
         {
             Storage.UpdateTeeth(egn, "z38", keyValuePairs[comboBox_z38.SelectedIndex.ToString()]);
+        }
+
+        private void new_row_button_Click(object sender, EventArgs e)
+        {
+            UIController.ShowPopUpCreateStatus(egn);
+        }
+
+        private void edit_row_button_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void delete_row_button_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
