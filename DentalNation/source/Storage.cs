@@ -181,9 +181,15 @@ namespace DentalNation.source
             return res;
         }
 
-        static public DBResult EditStatus(string date, string diagnosis, string manipulation, string price)
+        static public DBResult EditStatus(string egn, int id, string date, string diagnosis, string manipulation, string price)
         {
-            string query = "";
+            string query = "UPDATE status SET " +
+                            "date = '" + date + "', " +
+                            "diagnosis = '" + diagnosis + "', " +
+                            "manipulation = '" + manipulation + "', " +
+                            "price = '" + price + "' " +
+                            "WHERE egn = '" + egn + "' " +
+                            "AND id = '" + id + "'";
 
             DBResult res = db.Execute(query);
 

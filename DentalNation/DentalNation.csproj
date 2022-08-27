@@ -166,6 +166,9 @@
     <EmbeddedResource Include="popup\pop_up_edit_patient.resx">
       <DependentUpon>pop_up_edit_patient.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="popup\pop_up_edit_status.resx">
+      <DependentUpon>pop_up_edit_status.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
