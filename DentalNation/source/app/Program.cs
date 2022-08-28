@@ -20,6 +20,9 @@ namespace DentalNation
             Config.Init("Materials.txt");
             Storage.Init("localhost", "admin", "4444");
 
+            //string pth = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile);
+            //Logger.Write(Level.DEBUG, "Path: " + pth);
+
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new form_main());

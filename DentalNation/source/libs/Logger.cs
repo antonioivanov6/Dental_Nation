@@ -13,7 +13,8 @@ namespace DentalNation.source.libs
     {
         static public void Init(String fileName)
         {
-            writer = new StreamWriter(fileName);
+            string pth = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile);
+            writer = new StreamWriter(pth + "\\" + fileName);
             writer.AutoFlush = true;
         }
 
