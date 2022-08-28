@@ -12,11 +12,11 @@ namespace DentalNation
         {
             InitializeComponent();
 
-            Logger.Init("DentalNation.log");
+            //Logger.Init("DentalNation.log");
 
-            Config.Init("Materials.txt");
+            //Config.Init("Materials.txt");
 
-            Storage.Init("localhost", "admin", "4444");
+            //Storage.Init("localhost", "admin", "4444");
 
             UIController.Init(this, form_dashboard, form_search, form_patient_preview);
             UIController.ShowDashboard();

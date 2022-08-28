@@ -139,6 +139,8 @@
             this.delete_row_button = new System.Windows.Forms.Button();
             this.edit_row_button = new System.Windows.Forms.Button();
             this.new_row_button = new System.Windows.Forms.Button();
+            this.comboBox_material = new System.Windows.Forms.ComboBox();
+            this.comboBox_category = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.data_table_status)).BeginInit();
             this.SuspendLayout();
             // 
@@ -1265,7 +1267,7 @@
             // materials_text_box
             // 
             this.materials_text_box.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.materials_text_box.Location = new System.Drawing.Point(620, 500);
+            this.materials_text_box.Location = new System.Drawing.Point(620, 465);
             this.materials_text_box.Margin = new System.Windows.Forms.Padding(2);
             this.materials_text_box.Name = "materials_text_box";
             this.materials_text_box.Size = new System.Drawing.Size(344, 172);
@@ -1276,7 +1278,7 @@
             // label58
             // 
             this.label58.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label58.Location = new System.Drawing.Point(728, 472);
+            this.label58.Location = new System.Drawing.Point(728, 437);
             this.label58.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label58.Name = "label58";
             this.label58.Size = new System.Drawing.Size(133, 25);
@@ -1286,33 +1288,36 @@
             // 
             // add_category_button
             // 
-            this.add_category_button.Location = new System.Drawing.Point(620, 676);
+            this.add_category_button.Location = new System.Drawing.Point(619, 668);
             this.add_category_button.Margin = new System.Windows.Forms.Padding(2);
             this.add_category_button.Name = "add_category_button";
-            this.add_category_button.Size = new System.Drawing.Size(100, 29);
+            this.add_category_button.Size = new System.Drawing.Size(171, 29);
             this.add_category_button.TabIndex = 100;
             this.add_category_button.Text = "Add Category";
             this.add_category_button.UseVisualStyleBackColor = true;
+            this.add_category_button.Click += new System.EventHandler(this.add_category_button_Click);
             // 
             // add_material_button
             // 
-            this.add_material_button.Location = new System.Drawing.Point(757, 676);
+            this.add_material_button.Location = new System.Drawing.Point(796, 668);
             this.add_material_button.Margin = new System.Windows.Forms.Padding(2);
             this.add_material_button.Name = "add_material_button";
-            this.add_material_button.Size = new System.Drawing.Size(79, 29);
+            this.add_material_button.Size = new System.Drawing.Size(168, 29);
             this.add_material_button.TabIndex = 101;
             this.add_material_button.Text = "Add Material";
             this.add_material_button.UseVisualStyleBackColor = true;
+            this.add_material_button.Click += new System.EventHandler(this.add_material_button_Click);
             // 
             // save_material_button
             // 
-            this.save_material_button.Location = new System.Drawing.Point(891, 676);
+            this.save_material_button.Location = new System.Drawing.Point(732, 701);
             this.save_material_button.Margin = new System.Windows.Forms.Padding(2);
             this.save_material_button.Name = "save_material_button";
-            this.save_material_button.Size = new System.Drawing.Size(56, 29);
+            this.save_material_button.Size = new System.Drawing.Size(125, 29);
             this.save_material_button.TabIndex = 102;
             this.save_material_button.Text = "Save";
             this.save_material_button.UseVisualStyleBackColor = true;
+            this.save_material_button.Click += new System.EventHandler(this.save_material_button_Click);
             // 
             // delete_row_button
             // 
@@ -1347,11 +1352,31 @@
             this.new_row_button.UseVisualStyleBackColor = true;
             this.new_row_button.Click += new System.EventHandler(this.new_row_button_Click);
             // 
+            // comboBox_material
+            // 
+            this.comboBox_material.FormattingEnabled = true;
+            this.comboBox_material.Location = new System.Drawing.Point(796, 642);
+            this.comboBox_material.Name = "comboBox_material";
+            this.comboBox_material.Size = new System.Drawing.Size(168, 21);
+            this.comboBox_material.TabIndex = 106;
+            this.comboBox_material.SelectedIndexChanged += new System.EventHandler(this.comboBox_material_SelectedIndexChanged);
+            // 
+            // comboBox_category
+            // 
+            this.comboBox_category.FormattingEnabled = true;
+            this.comboBox_category.Location = new System.Drawing.Point(619, 642);
+            this.comboBox_category.Name = "comboBox_category";
+            this.comboBox_category.Size = new System.Drawing.Size(171, 21);
+            this.comboBox_category.TabIndex = 107;
+            this.comboBox_category.SelectedIndexChanged += new System.EventHandler(this.comboBox_category_SelectedIndexChanged);
+            // 
             // form_patient_preview
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LemonChiffon;
+            this.Controls.Add(this.comboBox_category);
+            this.Controls.Add(this.comboBox_material);
             this.Controls.Add(this.new_row_button);
             this.Controls.Add(this.edit_row_button);
             this.Controls.Add(this.delete_row_button);
@@ -1578,5 +1603,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Notes;
         private System.Windows.Forms.DataGridViewTextBoxColumn Materials;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
+        private System.Windows.Forms.ComboBox comboBox_material;
+        private System.Windows.Forms.ComboBox comboBox_category;
     }
 }

@@ -22,6 +22,11 @@ namespace DentalNation.popup
             this.egn = egn;
         }
 
+        protected override void OnFormClosing(FormClosingEventArgs e)
+        {
+            UIController.RestoreMainFocus();
+        }
+
         private void p_create_status_button_save_Click(object sender, EventArgs e)
         {
             DBResult res = Storage.CreateNewStatus(

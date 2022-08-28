@@ -14,6 +14,8 @@ namespace DentalNation.source.libs
 
             string[] lines = File.ReadAllLines(FileName);
 
+            Logger.Write(Level.DEBUG, "Readed lines from config file: " + lines.Length);
+
             foreach (string line in lines)
             {
                 if (line.Length == 0)
@@ -35,9 +37,29 @@ namespace DentalNation.source.libs
             }
         }
 
-        static public List<KeyValuePair<string, List<string>>> GetValues()
+        static public List<string> GetValues()
         {
-            return config;
+            List<string> categories = new List<string>();
+
+            foreach (KeyValuePair<string, List<string>> key in config)
+            {
+                categories.Add(key.Key);
+            }
+
+            return categories;
+        }
+
+        static public List<string> GetMaterials(string category)
+        {
+            foreach(KeyValuePair<string, List<string>> key in config)
+            {
+                if(key.Key == category)
+                {
+                    return key.Value;
+                }
+            }
+
+            return new List<string>();
         }
     }
 }

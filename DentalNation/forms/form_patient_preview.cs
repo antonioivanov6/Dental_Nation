@@ -74,6 +74,9 @@ namespace DentalNation.forms
             comboBox_z36.Items.AddRange(items);
             comboBox_z37.Items.AddRange(items);
             comboBox_z38.Items.AddRange(items);
+
+
+            initMaterials();
         }
 
         public void showStatusAndNotes(bool clearSelection = true)
@@ -100,6 +103,12 @@ namespace DentalNation.forms
             {
                 data_table_status.ClearSelection();
             }
+        }
+
+        private void initMaterials()
+        { 
+            comboBox_category.Items.AddRange(Config.GetValues().ToArray());
+            comboBox_category.SelectedIndex = 0;
         }
 
         private void data_table_status_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -133,7 +142,7 @@ namespace DentalNation.forms
 
         private void materials_text_box_TextChanged(object sender, EventArgs e)
         {
-
+            save_material_button.Enabled = true;
         }
 
         private void notes_text_box_TextChanged(object sender, EventArgs e)
@@ -377,6 +386,44 @@ namespace DentalNation.forms
             notes_button_save.Enabled = false;
 
             showStatusAndNotes(false);
+        }
+
+        private void add_category_button_Click(object sender, EventArgs e)
+        {
+            foreach(string material in Config.GetMaterials(comboBox_category.Text))
+            {
+                materials_text_box.Text += material + '\n';
+            }
+        }
+
+        private void add_material_button_Click(object sender, EventArgs e)
+        {
+            materials_text_box.Text += comboBox_material.Text + '\n';
+        }
+
+        private void save_material_button_Click(object sender, EventArgs e)
+        {
+            string id = data_table_status.CurrentRow.Cells[6].Value.ToString();
+            string newMaterials = materials_text_box.Text.ToString();
+
+            Storage.UpdateMaterials(id, newMaterials);
+            save_material_button.Enabled = false;
+            showStatusAndNotes(false);
+        }
+
+        private void comboBox_category_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            save_material_button.Enabled = true;
+            comboBox_material.Items.Clear();
+
+            List<string> materials = Config.GetMaterials(comboBox_category.Text);
+            comboBox_material.Items.AddRange(materials.ToArray());
+            comboBox_material.SelectedIndex = 0;
+        }
+
+        private void comboBox_material_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            save_material_button.Enabled = true;
         }
     }
 }

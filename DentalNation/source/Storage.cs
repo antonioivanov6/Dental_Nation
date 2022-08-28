@@ -229,6 +229,20 @@ namespace DentalNation.source
             return res;
         }
 
+        static public DBResult UpdateMaterials(string id, string materials)
+        {
+            string query = "UPDATE status SET materials = '" + materials + "' WHERE id = " + id;
+
+            DBResult res = db.Execute(query);
+
+            if (res.error.hasError)
+            {
+                Logger.Write(Level.DEBUG, "ErrorMsg: " + res.error.errorMsg);
+            }
+
+            return res;
+        }
+
         static private Database db;
     }
 }
