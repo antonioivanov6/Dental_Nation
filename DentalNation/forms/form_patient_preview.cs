@@ -76,7 +76,7 @@ namespace DentalNation.forms
             comboBox_z38.Items.AddRange(items);
         }
 
-        public void showStatusAndNotes()
+        public void showStatusAndNotes(bool clearSelection = true)
         {
             //Clear Old Content
             data_table_status.Rows.Clear();
@@ -96,7 +96,10 @@ namespace DentalNation.forms
                     );
             }
 
-            data_table_status.ClearSelection();
+            if(clearSelection)
+            {
+                data_table_status.ClearSelection();
+            }
         }
 
         private void data_table_status_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -366,19 +369,14 @@ namespace DentalNation.forms
 
         private void notes_button_save_Click(object sender, EventArgs e)
         {
-            string id = data_table_status.CurrentRow.Cells[6].Value.ToString();
-            //string newNote = data_table_status.CurrentRow.Cells[4].Value.ToString();
-
+            string id      = data_table_status.CurrentRow.Cells[6].Value.ToString();
             string newNote = notes_text_box.Text.ToString();
-
-            Logger.Write(Level.DEBUG, "ID: " + id);
-            Logger.Write(Level.DEBUG, "New Note: " + newNote);
 
             Storage.UpdateStatusNote(id, newNote);
 
             notes_button_save.Enabled = false;
 
-            showStatusAndNotes();
+            showStatusAndNotes(false);
         }
     }
 }
