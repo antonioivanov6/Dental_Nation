@@ -122,6 +122,13 @@
             this.label56 = new System.Windows.Forms.Label();
             this.comboBox_z31 = new System.Windows.Forms.ComboBox();
             this.data_table_status = new System.Windows.Forms.DataGridView();
+            this.Date = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Diagnosis = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Manipulation = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Price = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Notes = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Materials = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.notes_text_box = new System.Windows.Forms.RichTextBox();
             this.label57 = new System.Windows.Forms.Label();
             this.materials_text_box = new System.Windows.Forms.RichTextBox();
@@ -132,13 +139,6 @@
             this.delete_row_button = new System.Windows.Forms.Button();
             this.edit_row_button = new System.Windows.Forms.Button();
             this.new_row_button = new System.Windows.Forms.Button();
-            this.Date = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Diagnosis = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Manipulation = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Price = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Notes = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Materials = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.data_table_status)).BeginInit();
             this.SuspendLayout();
             // 
@@ -151,6 +151,7 @@
             this.notes_button_save.TabIndex = 0;
             this.notes_button_save.Text = "Save";
             this.notes_button_save.UseVisualStyleBackColor = true;
+            this.notes_button_save.Click += new System.EventHandler(this.notes_button_save_Click);
             // 
             // comboBox_z18
             // 
@@ -1193,6 +1194,52 @@
             this.data_table_status.TabIndex = 95;
             this.data_table_status.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.data_table_status_CellClick);
             // 
+            // Date
+            // 
+            this.Date.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Date.HeaderText = "Date";
+            this.Date.MinimumWidth = 6;
+            this.Date.Name = "Date";
+            // 
+            // Diagnosis
+            // 
+            this.Diagnosis.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Diagnosis.HeaderText = "Diagnosis";
+            this.Diagnosis.MinimumWidth = 6;
+            this.Diagnosis.Name = "Diagnosis";
+            // 
+            // Manipulation
+            // 
+            this.Manipulation.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Manipulation.HeaderText = "Manipulation";
+            this.Manipulation.MinimumWidth = 6;
+            this.Manipulation.Name = "Manipulation";
+            // 
+            // Price
+            // 
+            this.Price.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Price.HeaderText = "Price";
+            this.Price.MinimumWidth = 6;
+            this.Price.Name = "Price";
+            // 
+            // Notes
+            // 
+            this.Notes.HeaderText = "Notes";
+            this.Notes.Name = "Notes";
+            this.Notes.Visible = false;
+            // 
+            // Materials
+            // 
+            this.Materials.HeaderText = "Materials";
+            this.Materials.Name = "Materials";
+            this.Materials.Visible = false;
+            // 
+            // ID
+            // 
+            this.ID.HeaderText = "ID";
+            this.ID.Name = "ID";
+            this.ID.Visible = false;
+            // 
             // notes_text_box
             // 
             this.notes_text_box.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -1299,52 +1346,6 @@
             this.new_row_button.Text = "New row";
             this.new_row_button.UseVisualStyleBackColor = true;
             this.new_row_button.Click += new System.EventHandler(this.new_row_button_Click);
-            // 
-            // Date
-            // 
-            this.Date.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Date.HeaderText = "Date";
-            this.Date.MinimumWidth = 6;
-            this.Date.Name = "Date";
-            // 
-            // Diagnosis
-            // 
-            this.Diagnosis.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Diagnosis.HeaderText = "Diagnosis";
-            this.Diagnosis.MinimumWidth = 6;
-            this.Diagnosis.Name = "Diagnosis";
-            // 
-            // Manipulation
-            // 
-            this.Manipulation.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Manipulation.HeaderText = "Manipulation";
-            this.Manipulation.MinimumWidth = 6;
-            this.Manipulation.Name = "Manipulation";
-            // 
-            // Price
-            // 
-            this.Price.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Price.HeaderText = "Price";
-            this.Price.MinimumWidth = 6;
-            this.Price.Name = "Price";
-            // 
-            // Notes
-            // 
-            this.Notes.HeaderText = "Notes";
-            this.Notes.Name = "Notes";
-            this.Notes.Visible = false;
-            // 
-            // Materials
-            // 
-            this.Materials.HeaderText = "Materials";
-            this.Materials.Name = "Materials";
-            this.Materials.Visible = false;
-            // 
-            // ID
-            // 
-            this.ID.HeaderText = "ID";
-            this.ID.Name = "ID";
-            this.ID.Visible = false;
             // 
             // form_patient_preview
             // 
