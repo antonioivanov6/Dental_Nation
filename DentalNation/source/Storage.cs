@@ -181,7 +181,7 @@ namespace DentalNation.source
             return res;
         }
 
-        static public DBResult EditStatus(string egn, int id, string date, string diagnosis, string manipulation, string price)
+        static public DBResult EditStatus(string egn, string id, string date, string diagnosis, string manipulation, string price)
         {
             string query = "UPDATE status SET " +
                             "date = '" + date + "', " +
@@ -189,7 +189,21 @@ namespace DentalNation.source
                             "manipulation = '" + manipulation + "', " +
                             "price = '" + price + "' " +
                             "WHERE egn = '" + egn + "' " +
-                            "AND id = '" + id + "'";
+                            "AND id = " + id + "";
+
+            DBResult res = db.Execute(query);
+
+            if (res.error.hasError)
+            {
+                Logger.Write(Level.DEBUG, "ErrorMsg: " + res.error.errorMsg);
+            }
+
+            return res;
+        }
+
+        static public DBResult DeleteStatus(string id)
+        {
+            string query = "DELETE FROM status WHERE id = " + id;
 
             DBResult res = db.Execute(query);
 

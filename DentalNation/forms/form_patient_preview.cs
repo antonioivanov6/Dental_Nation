@@ -348,17 +348,20 @@ namespace DentalNation.forms
 
         private void edit_row_button_Click(object sender, EventArgs e)
         {
+            
             string date         = data_table_status.CurrentRow.Cells[0].Value.ToString();
             string diagnosis    = data_table_status.CurrentRow.Cells[1].Value.ToString();
             string manipulation = data_table_status.CurrentRow.Cells[2].Value.ToString();
             string price        = data_table_status.CurrentRow.Cells[3].Value.ToString();
+            string id           = data_table_status.CurrentRow.Cells[6].Value.ToString();
 
-            UIController.ShowPopUpEditStatus(date, price, diagnosis, manipulation);
+            UIController.ShowPopUpEditStatus(egn, id, date, price, diagnosis, manipulation);
         }
 
         private void delete_row_button_Click(object sender, EventArgs e)
         {
-
+            Storage.DeleteStatus(data_table_status.CurrentRow.Cells[6].Value.ToString());
+            showStatusAndNotes();
         }
     }
 }

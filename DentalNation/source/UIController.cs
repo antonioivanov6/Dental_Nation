@@ -91,12 +91,10 @@ namespace DentalNation.source
             popUp.Show();
         }
 
-        static public void ShowPopUpEditStatus(string date, 
-            string price,
-            string diagnosis, 
-            string manipulation)
+        static public void ShowPopUpEditStatus(string egn, string id, string date, 
+            string price, string diagnosis, string manipulation)
         {
-            pop_up_edit_status popUp = new pop_up_edit_status(date, price, diagnosis, manipulation);
+            pop_up_edit_status popUp = new pop_up_edit_status(egn, id, date, price, diagnosis, manipulation);
             _form_Main.Enabled = false;
             popUp.Show();
         }
