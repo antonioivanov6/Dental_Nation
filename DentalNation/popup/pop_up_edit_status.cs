@@ -35,6 +35,12 @@ namespace DentalNation.popup
             p_edit_status_textBox_diagnosis.Text = diagnosis;
             p_edit_status_textBox_manipulation.Text = manipulation;
 
+            p_edit_status_textBox_date.TabIndex = 0;
+            p_edit_status_textBox_price.TabIndex = 1;
+            p_edit_status_textBox_diagnosis.TabIndex = 2;
+            p_edit_status_textBox_manipulation.TabIndex = 3;
+            p_edit_status_button_save.TabIndex = 4;
+
         }
 
         protected override void OnFormClosing(FormClosingEventArgs e)

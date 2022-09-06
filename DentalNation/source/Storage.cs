@@ -88,6 +88,27 @@ namespace DentalNation.source
             if (res.error.hasError)
             {
                 Logger.Write(Level.DEBUG, "ErrorMsg: " + res.error.errorMsg);
+                return res;
+            }
+
+            query = "DELETE FROM status WHERE egn = '" + egn + "'";
+
+            res = db.Execute(query);
+
+            if (res.error.hasError)
+            {
+                Logger.Write(Level.DEBUG, "ErrorMsg: " + res.error.errorMsg);
+                return res;
+            }
+
+            query = "DELETE FROM teeth WHERE egn = '" + egn + "'";
+
+            res = db.Execute(query);
+
+            if (res.error.hasError)
+            {
+                Logger.Write(Level.DEBUG, "ErrorMsg: " + res.error.errorMsg);
+                return res;
             }
 
             return res;

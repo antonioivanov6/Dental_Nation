@@ -17,6 +17,13 @@ namespace DentalNation.popup
         {
             InitializeComponent();
 
+            p_edit_patient_textBox_name.TabIndex = 0;
+            p_edit_patient_textBox_egn.TabIndex = 1;
+            p_edit_patient_textBox_gsm.TabIndex = 2;
+            p_edit_patient_textBox_email.TabIndex = 3;
+
+            p_edit_patient_button_save.TabIndex = 4;
+
             oldEgn = egn;
 
             p_edit_patient_textBox_name.Text = name;

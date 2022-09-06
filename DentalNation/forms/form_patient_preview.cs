@@ -17,6 +17,8 @@ namespace DentalNation.forms
         public form_patient_preview()
         {
             InitializeComponent();
+
+
             //data_table_status.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
 
             keyValuePairs = new Dictionary<string, string>();
@@ -49,6 +51,7 @@ namespace DentalNation.forms
             comboBox_z11.Items.AddRange(items);
 
             comboBox_z21.Items.AddRange(items);
+            comboBox_z22.Items.AddRange(items);
             comboBox_z23.Items.AddRange(items);
             comboBox_z23.Items.AddRange(items);
             comboBox_z24.Items.AddRange(items);

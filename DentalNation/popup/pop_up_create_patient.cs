@@ -11,6 +11,14 @@ namespace DentalNation.popup
         public pop_up_create_patient()
         {
             InitializeComponent();
+
+            p_create_patient_textBox_name.TabIndex = 0;
+            p_create_patient_textBox_egn.TabIndex = 1;
+            p_create_patient_textBox_gsm.TabIndex = 2;
+            p_create_patient_textBox_email.TabIndex = 3;
+
+            p_create_patient_button_save.TabIndex = 4;
+            p_create_patient_button_save_and_work.TabIndex = 5;
         }
 
         protected override void OnFormClosing(FormClosingEventArgs e)
@@ -54,6 +62,7 @@ namespace DentalNation.popup
             if (!res1.error.hasError && !res2.error.hasError)
             {
                 UIController.RestoreMainFocus();
+                UIController.ShowPatientPreview(name, egn, gsm, email);
                 Close();
             }
             else
