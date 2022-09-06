@@ -102,12 +102,6 @@
     <Compile Include="forms\main_form.Designer.cs">
       <DependentUpon>main_form.cs</DependentUpon>
     </Compile>
-    <Compile Include="forms\form_dashboard.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="forms\form_dashboard.Designer.cs">
-      <DependentUpon>form_dashboard.cs</DependentUpon>
-    </Compile>
     <Compile Include="forms\form_search.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -145,9 +139,6 @@
     <Compile Include="source\libs\Logger.cs" />
     <Compile Include="source\Storage.cs" />
     <Compile Include="source\UIController.cs" />
-    <EmbeddedResource Include="forms\form_dashboard.resx">
-      <DependentUpon>form_dashboard.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="forms\form_patient_preview.resx">
       <DependentUpon>form_patient_preview.cs</DependentUpon>
     </EmbeddedResource>
