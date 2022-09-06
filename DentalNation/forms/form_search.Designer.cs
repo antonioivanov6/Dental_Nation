@@ -31,14 +31,14 @@
             this.f_search_text_box = new System.Windows.Forms.TextBox();
             this.f_search_button_search = new System.Windows.Forms.Button();
             this.data_table_patients = new System.Windows.Forms.DataGridView();
-            this.p_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.p_egn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.p_gsm = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.p_email = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.f_search_button_open = new System.Windows.Forms.Button();
             this.f_search_button_edit = new System.Windows.Forms.Button();
             this.f_search_button_delete = new System.Windows.Forms.Button();
             this.f_search_button_create = new System.Windows.Forms.Button();
+            this.p_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.p_egn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.p_gsm = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.p_email = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.data_table_patients)).BeginInit();
             this.SuspendLayout();
             // 
@@ -74,36 +74,7 @@
             this.data_table_patients.RowHeadersWidth = 51;
             this.data_table_patients.Size = new System.Drawing.Size(1282, 832);
             this.data_table_patients.TabIndex = 2;
-            this.data_table_patients.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.data_table_patients_CellContentClick);
-            // 
-            // p_name
-            // 
-            this.p_name.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.p_name.HeaderText = "Name";
-            this.p_name.MinimumWidth = 6;
-            this.p_name.Name = "p_name";
-            this.p_name.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            // 
-            // p_egn
-            // 
-            this.p_egn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.p_egn.HeaderText = "EGN";
-            this.p_egn.MinimumWidth = 6;
-            this.p_egn.Name = "p_egn";
-            // 
-            // p_gsm
-            // 
-            this.p_gsm.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.p_gsm.HeaderText = "GSM";
-            this.p_gsm.MinimumWidth = 6;
-            this.p_gsm.Name = "p_gsm";
-            // 
-            // p_email
-            // 
-            this.p_email.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.p_email.HeaderText = "Email";
-            this.p_email.MinimumWidth = 6;
-            this.p_email.Name = "p_email";
+            this.data_table_patients.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.data_table_patients_CellMouseDoubleClick);
             // 
             // f_search_button_open
             // 
@@ -149,6 +120,39 @@
             this.f_search_button_create.UseVisualStyleBackColor = true;
             this.f_search_button_create.Click += new System.EventHandler(this.f_search_button_create_Click);
             // 
+            // p_name
+            // 
+            this.p_name.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.p_name.HeaderText = "Name";
+            this.p_name.MinimumWidth = 6;
+            this.p_name.Name = "p_name";
+            this.p_name.ReadOnly = true;
+            this.p_name.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            // 
+            // p_egn
+            // 
+            this.p_egn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.p_egn.HeaderText = "EGN";
+            this.p_egn.MinimumWidth = 6;
+            this.p_egn.Name = "p_egn";
+            this.p_egn.ReadOnly = true;
+            // 
+            // p_gsm
+            // 
+            this.p_gsm.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.p_gsm.HeaderText = "GSM";
+            this.p_gsm.MinimumWidth = 6;
+            this.p_gsm.Name = "p_gsm";
+            this.p_gsm.ReadOnly = true;
+            // 
+            // p_email
+            // 
+            this.p_email.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.p_email.HeaderText = "Email";
+            this.p_email.MinimumWidth = 6;
+            this.p_email.Name = "p_email";
+            this.p_email.ReadOnly = true;
+            // 
             // form_search
             // 
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
@@ -172,13 +176,13 @@
         private System.Windows.Forms.TextBox f_search_text_box;
         private System.Windows.Forms.Button f_search_button_search;
         private System.Windows.Forms.DataGridView data_table_patients;
-        private System.Windows.Forms.DataGridViewTextBoxColumn p_name;
-        private System.Windows.Forms.DataGridViewTextBoxColumn p_egn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn p_gsm;
-        private System.Windows.Forms.DataGridViewTextBoxColumn p_email;
         private System.Windows.Forms.Button f_search_button_open;
         private System.Windows.Forms.Button f_search_button_edit;
         private System.Windows.Forms.Button f_search_button_delete;
         private System.Windows.Forms.Button f_search_button_create;
+        private System.Windows.Forms.DataGridViewTextBoxColumn p_name;
+        private System.Windows.Forms.DataGridViewTextBoxColumn p_egn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn p_gsm;
+        private System.Windows.Forms.DataGridViewTextBoxColumn p_email;
     }
 }

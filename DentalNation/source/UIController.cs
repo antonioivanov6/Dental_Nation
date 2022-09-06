@@ -30,6 +30,8 @@ namespace DentalNation.source
             //Show
             _form_Search.Show();
             _form_Search.BringToFront();
+
+            _form_Search.refreshTable("");
         }
 
         static public void ShowPatientPreview(string name, string egn, string gsm, string email)

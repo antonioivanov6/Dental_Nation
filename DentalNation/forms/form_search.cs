@@ -24,11 +24,6 @@ namespace DentalNation.forms
             refreshTable(f_search_text_box.Text);
         }
 
-        private void data_table_patients_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
         private void f_search_button_open_Click(object sender, EventArgs e)
         {
             try
@@ -83,7 +78,7 @@ namespace DentalNation.forms
             UIController.ShowPopUpCreatePatient();
         }
 
-        private void refreshTable(string search)
+        public void refreshTable(string search)
         {
             //Clear Old Content
             data_table_patients.Rows.Clear();
@@ -98,6 +93,24 @@ namespace DentalNation.forms
             }
 
             data_table_patients.ClearSelection();
+        }
+
+        private void data_table_patients_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            //test
+            try
+            {
+                string name = data_table_patients.SelectedCells[0].Value.ToString();
+                string egn = data_table_patients.SelectedCells[1].Value.ToString();
+                string gsm = data_table_patients.SelectedCells[2].Value.ToString();
+                string email = data_table_patients.SelectedCells[3].Value.ToString();
+
+                UIController.ShowPatientPreview(name, egn, gsm, email);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }
