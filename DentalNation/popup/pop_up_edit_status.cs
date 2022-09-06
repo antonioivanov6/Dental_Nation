@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 using DentalNation.source;
+using DentalNation.source.libs;
 
 namespace DentalNation.popup
 {
@@ -50,12 +51,24 @@ namespace DentalNation.popup
 
         private void p_edit_status_button_save_Click(object sender, EventArgs e)
         {
-            Storage.EditStatus(egn,
+            DBResult res = Storage.EditStatus(egn,
                 id,
                 p_edit_status_textBox_date.Text,
                 p_edit_status_textBox_diagnosis.Text,
                 p_edit_status_textBox_manipulation.Text,
                 p_edit_status_textBox_price.Text);
+
+            if (!res.error.hasError)
+            {
+                UIController.RefreshStatusAndNotes();
+                UIController.RestoreMainFocus();
+                Close();
+            }
+            else
+            {
+                Logger.Write(Level.ERROR, "Err: " + res.error.errorMsg);
+                MessageBox.Show("Err: " + res.error.errorMsg);
+            }
         }
     }
 }
